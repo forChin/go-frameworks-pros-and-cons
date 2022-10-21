@@ -1,0 +1,25 @@
+syntax = "v1"
+
+info (
+	title: // TODO: add title
+	desc: // TODO: add description
+	author: ""
+	email: "chingiz409@gmail.com"
+)
+
+type (
+	userReq {
+		Name string `json:"name"`
+		Age  int    `json:"age"`
+	}
+
+	userResp {
+	}
+)
+
+service user-api {
+	@server(
+		handler: UserHandler
+	)
+	post /(userReq) returns(userResp)
+}
