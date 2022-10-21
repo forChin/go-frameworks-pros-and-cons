@@ -3,6 +3,13 @@ Endpoints were tested by [ApacheBench](https://httpd.apache.org/docs/2.4/program
 ```
 ab -n 1000 -p user_json.txt -T application/json http://localhost:8080/
 ```
+Content of user_json.txt:
+```
+{
+  "name":"chingiz",
+  "age":22
+}
+```
 Endpoint logic for all implementations is similar (current example is written in [chi](https://github.com/go-chi/chi)):
 ```
 r := chi.NewRouter()
